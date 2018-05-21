@@ -68,9 +68,9 @@ func Index(writer http.ResponseWriter, request *http.Request) {
 	// check if user has valid session
 	_, err := sessionCheck(writer, request)
 	if err != nil {
-		generateHTML(writer, nil, "layout", "index","login")
+		generateHTML(writer, nil, "layout", "index", "login")
 	} else {
-		generateHTML(writer, nil, "layout", "index_loggedin", "progressbar")
+		generateHTML(writer, nil, "layout", "index_loggedin", "progressbar","weiteres")
 	}
 }
 
